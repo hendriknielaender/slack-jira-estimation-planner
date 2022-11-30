@@ -3,20 +3,7 @@
 This project lets you make estimations with planning poker technique (or scrum poker) directly in Slack, without any need of external software.
 It can be a useful tool for agile remote teams.
 
-Slack App Directory: https://slack.com/apps/A57FFS3QE-poker-planner
-
-[![Demonstration](./assets/demo.gif)](https://deniz.co/slack-poker-planner/)
-
-## Installation & Add to your Slack Team
-
-- Go to website: https://deniz.co/slack-poker-planner/
-- Click **"Add to Slack"** button
-- Select the team you want to install Poker Planner from the dropdown top right
-- Click **Allow** button
-
-## Usage
-
-For detailed usage documentation, please visit [website](https://deniz.co/slack-poker-planner/#usage).
+[![Demonstration](./assets/demo.gif)]
 
 ## Self-hosting
 
@@ -45,7 +32,7 @@ If you want to host your own app, follow this steps:
 ### Running via Docker
 
 - Clone the repo & `cd` into it
-- Build docker image: `docker build -t dgurkaynak/slack-poker-planner .`
+- Build docker image: `docker build -t slack-jira-estimation-planner .`
 - Start container:
 ```sh
 docker run -d \
@@ -56,16 +43,16 @@ docker run -d \
   -e SLACK_VERIFICATION_TOKEN=xxx \
   -e SLACK_APP_ID=xxx \
   -e DATA_FOLDER=/data \
-  -v /host/data/folder/slack-poker-planner:/data \
-  --name slack-poker-planner \
-  dgurkaynak/slack-poker-planner
+  -v /host/data/folder/slack-jira-estimation-planner:/data \
+  --name slack-jira-estimation-planner \
+  slack-jira-estimation-planner
 ```
 
-> Check out [.env](https://github.com/dgurkaynak/slack-poker-planner/blob/master/.env) file for the complete list of environment variables.
+> Check out .env file for the complete list of environment variables.
 
 ### Running Manually
 
-Node.js requirement `>= 16.17.0`
+Node.js requirement `>= 18.12.0`
 
 - Clone this repo
 - Install dependencies: `npm i`
