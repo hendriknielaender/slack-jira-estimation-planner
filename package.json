@@ -5,6 +5,7 @@
   "main": "dist/app.js",
   "scripts": {
     "build": "./esbuild.js",
+    "build:dev": "./esbuild.dev.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/app.js"
   },
