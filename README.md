@@ -3,8 +3,32 @@
 This project lets you make estimations with planning poker technique (or scrum poker) directly in Slack, without any need of external software.
 It can be a useful tool for agile remote teams.
 
-[![Demonstration](./assets/demo.gif)]
+[![Demonstration](./assets/demo.gif)
 
+## Usage
+
+After successful installation, `/pp` slash command will be available in your team workspace. It works in:
+- Public channels
+- Private channels
+- Group direct messages
+
+**Poker Planner app must be added to channel/conversation before usage.** You can add it from channel/conversation details menu, or just simply mention the app, like `@poker_planner`.
+
+### `/pp some session title`
+This command starts a poker planning session with specified title, or simply anything you typed after `/pp`.
+
+**WARNING:** Topic text cannot start with **"config"** and **"help"** (case-sensitive). They have another functionalities which is described below.
+
+### `/pp config`
+This command is deprecated and will be removed in future releases.
+
+### `/pp help`
+This commands prints a cheatsheet of usage.
+Required Slack Permissions
+commands - Add actions and/or slash commands that people can use.
+
+We will add `/pp` slash command
+chat:write - Send messages as Poker Planner
 ## Self-hosting
 
 If you want to host your own app, follow this steps:
