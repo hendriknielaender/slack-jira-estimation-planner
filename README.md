@@ -88,6 +88,11 @@ SLACK_VERIFICATION_TOKEN=
 SLACK_SCOPE=chat:write,commands
 SLACK_APP_ID=
 
+# Jira app credentials
+JIRA_HOST=
+JIRA_CLIENT_USER=
+JIRA_CLIENT_PWD=
+
 # Link placeholders for slack user response
 APP_INSTALL_LINK=
 ISSUES_LINK=https://github.com/hendriknielaender/slack-jira-estimation-planner/issues
