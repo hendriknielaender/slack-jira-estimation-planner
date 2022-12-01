@@ -1,4 +1,4 @@
-import JiraApi from 'jira-client';
+import * as JiraApi from 'jira-client';
 
 var jira = new JiraApi({
   protocol: 'https',

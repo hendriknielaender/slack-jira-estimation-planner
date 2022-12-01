@@ -32,8 +32,8 @@ export class PPCommandRoute {
       });
     }
 
-    //TODO check if jira ticket/issue exists
-    if (!isValidIssue(cmd.text)) {
+    //check if jira ticket/issue exists
+    if (! await isValidIssue(cmd.text)) {
       const errorId = generateId();
       logger.error({
         msg: `Could not created session, command.text not a valid jira ticket/issue`,
