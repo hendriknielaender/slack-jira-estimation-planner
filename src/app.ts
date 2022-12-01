@@ -4,7 +4,7 @@ import logger from './lib/logger';
 import sqlite from './lib/sqlite';
 import express from 'express';
 import bodyParser from 'body-parser';
-import exphbs from 'express-handlebars';
+import * as exphbs from 'express-handlebars';
 import { OAuthRoute } from './routes/oauth';
 import { PPCommandRoute } from './routes/pp-command';
 import { InteractivityRoute } from './routes/interactivity';
