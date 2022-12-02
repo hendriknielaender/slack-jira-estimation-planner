@@ -10,6 +10,7 @@ import {
   DEFAULT_POINTS,
 } from '../session/session-controller';
 import { splitSpacesExcludeQuotes } from 'quoted-string-space-split';
+import { isValidIssue } from '../lib/jira';
 
 export class PPCommandRoute {
   /**
@@ -31,10 +32,11 @@ export class PPCommandRoute {
       });
     }
 
-    if (!isString(cmd.text)) {
+    //check if jira ticket/issue exists
+    if (! await isValidIssue(cmd.text)) {
       const errorId = generateId();
       logger.error({
-        msg: `Could not created session, command.text not string`,
+        msg: `Could not created session, command.text not a valid jira ticket/issue`,
         errorId,
         cmd,
       });
@@ -268,7 +270,7 @@ export class PPCommandRoute {
         {
           color: '#3AA3E3',
           text:
-            '`/pp some topic text`\n' +
+            '`/pp JIRA-000`\n' +
             'Opens the same dialog, however title input is automatically ' +
             'filled with the value you provided.',
         },
